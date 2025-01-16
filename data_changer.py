@@ -1,6 +1,6 @@
-created_date = "16-01-2025" 
-issue_date = "29-01-2025"    
-temp_created_date = datetime.strptime(created_date, "%d.%m.%Y").strftime("%d.%m")
-temp_issue_date = datetime.strptime(issue_date, "%d.%m.%Y").strftime("%d.%m")
-print("Дата создания:", temp_created_date)
-print("Дата истечения:", temp_issue_date)
+created_date = input("Введите дату создания: ")
+issue_date = input("Введите дату окончания: ")
+temp_created_date = created_date[:5]
+temp_issue_date = issue_date [:5]
+print("Дата создания", temp_created_date)
+print("Дата окончания", temp_issue_date)
