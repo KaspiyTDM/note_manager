@@ -1,12 +1,12 @@
-username = input("Имя пользователя")
-print("Имя пользователя",username)
-title = input("Заголовок заметки")
-print("Заголовок заметки",title)
-content = input("Описание заметки")
-print("Описание заметки",content)
-status = input("Статус заметки")
-print("Статус заметки", status)
-created_date = input("Дата создания заметки")
-print("Дата создания заметки", created_date)
-issue_date = input("Дата истечения заметки")
-print("Дата истечения заметки", issue_date)
+username = "Андрей Петров"
+title = "Grade 1 Этап 1 Задание 1"
+content = "Работа с переменными"
+status = "Завершено"
+created_date = "15-01-2025"
+issue_date = "20-01-2025"
+print("Имя пользователя:", username)
+print("Заголовок заметки:", title)
+print("Описание заметки:", content)
+print("Статус заметки:", status)
+print("Дата создания заметки:", created_date)
+print("Дата истечения заметки:", issue_date)
