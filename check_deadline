@@ -1,0 +1,28 @@
+from datetime import datetime
+def give_current_date():
+    """Функция получения текущей даты."""
+    return datetime.now()
+def calc_difference_day(current_date, issue_date):
+    """Вычисление разности между датами"""
+    difference = issue_date - current_date
+    return difference.days # возвращаем разность
+def user_input_date():
+    """Получение корректной даты дедлайна от пользователя."""
+    while True:
+        user_input = input("Введите дату дедлайна (в формате день-месяц-год): ")
+        try:
+            return datetime.strptime(user_input, "%d-%m-%Y")
+        except ValueError:
+            print("Ошибочный формат ввода даты. Введите дату в установленном формате день-месяц-год, к примеру 01-02-2003")
+def main():
+    """Контроль основную логику программы"""
+    current_date = give_current_date()
+    print(f"Текущая дата: {current_date.strftime('%d-%m-%Y')}")
+    issue_date = user_input_date()
+    days_difference = calc_difference_day(current_date, issue_date)
+    if days_difference > 0:
+        print(f"До дедлайна осталось {days_difference} дней.")
+    elif days_difference < 0:
+        print(f"Внимание! Дедлайн истёк {-days_difference} дней назад.")
+    else:
+        print("Дедлайн сегодня!")
